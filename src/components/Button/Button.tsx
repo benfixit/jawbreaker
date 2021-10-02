@@ -1,5 +1,5 @@
 import { FC, MouseEventHandler, ReactNode, createElement } from "react";
-import { className } from "@utils";
+import { className } from "utils";
 
 import styles from "./Button.module.less";
 
@@ -62,6 +62,13 @@ interface ButtonProps {
   onClick?: MouseEventHandler<HTMLElement>;
 }
 
+/**
+ * Button Component
+ * @todo Loading props
+ * @param param0
+ * @returns
+ */
+
 const Button: FC<ButtonProps> = ({
   shape,
   size = "middle",
@@ -98,7 +105,7 @@ const Button: FC<ButtonProps> = ({
       ...rest,
     },
     <>
-      {loading && <span>Loading</span>}
+      {/* {loading && <span>Loading</span>} */}
       {icon}
       {children}
     </>
